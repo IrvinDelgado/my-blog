@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -9,13 +10,71 @@
   <meta name="author" content="SitePoint">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
 
 </head>
 
+<!-- 
+File Struct
+  About Me
+  Projects
+  Contact Me
+
+"container" - Whole page
+"row" - Section
+-->
+
+
 <body>
-    <div>
-        <p>This is an html DIV</p>
+  <div class="container">
+
+    <div class="row section about-me">
+      <div class="about-me-header">
+        <img class="profile-pic" src="/assets/headshot.PNG">
+        <p class="title">Hi, I'm Irvin. Currently finishing my last year at University.</p>
+      </div>
+      <div class="section-footer">
+        <p class="desc">Learn More About My Projects!</p>
+        <svg id="to-project-arrow" class="scroll-down-arrow" onclick="scrollTo()">
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <polyline points="19 12 12 19 5 12" />
+        </svg>
+      </div>
     </div>
-  <!--<script src="js/scripts.js"></script>-->
+
+    <div id="projects" class="row section projects">
+      <div class="project-list">
+        <br>
+        <div class="project-object">
+          <div class="project-title">AMERICAN AIRLINES</div>
+          <div class="project-image">BOX</div>
+          <div class="project-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et maiores temporibus consectetur minus, facere ducimus, officia magni ipsam iste similique aliquid quam vero ratione, aperiam totam rem nihil cupiditate error!</div>
+        </div>
+        <br>
+        <div class="project-object">
+          <div class="project-title">AMERICAN AIRLINES</div>
+          <div class="project-image">BOX</div>
+          <div class="project-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et maiores temporibus consectetur minus, facere ducimus, officia magni ipsam iste similique aliquid quam vero ratione, aperiam totam rem nihil cupiditate error!</div>
+        </div>
+        <br>
+        <div class="project-object">
+          <div class="project-title">AMERICAN AIRLINES</div>
+          <div class="project-image">BOX</div>
+          <div class="project-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et maiores temporibus consectetur minus, facere ducimus, officia magni ipsam iste similique aliquid quam vero ratione, aperiam totam rem nihil cupiditate error!</div>
+        </div>
+        <br>
+        <svg id="to-contact-arrow" class="scroll-down-arrow" onclick="scrollTo()">
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <polyline points="19 12 12 19 5 12" />
+        </svg>
+      </div>
+    </div>
+
+    <div id ="contact" class="row section">
+      <p>Contact Me</p>
+    </div>
+  </div>
+  <script src="/scripts/script.js"></script>
 </body>
+
 </html>

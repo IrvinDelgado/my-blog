@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+$break-small: 500px;
+$font-theme: "Permanent Marker", "Courier New", Courier;
+$font-color: #181515;
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-me {
+    background-color: #6c757d;
+}
+
+
+.title {
+    margin-top: 20px;
+    font-family: $font-theme;
+    font-weight: 700;
+    font-size: 5vw;
+    text-align: center;
+    color: #ffffff;
+}
+.desc {
+    color: #ffffff;
+}
+
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 30vh;
+    margin: auto;
+}
+
+.section-footer{
+    position:relative;
+    bottom:0;
+}
+.scroll-down-arrow {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #ffffff;
+    fill: none;
+    height: 50px;
+    width: 24px;
+    animation-name: scrollDownAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollDownAnim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    75% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.projects{
+    background-color: #343a40;
+}
+
+.project-object{
+    display: grid;
+    background-color: #dee2e6;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "project-image project-title project-title"
+    "project-image project-desc project-desc"
+    "project-image project-desc project-desc";
+}
+.project-image{
+    grid-area: project-image;
+}
+.project-title{
+    grid-area: project-title;
+    font-size: 30px;
+    background-color: #212529;
+    color: white;
+}
+.project-desc{
+    grid-area: project-desc;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+//min width means that after
+//@media screen and (min-width: $break-small) {
+//    .profile-pic{
+//        height: 500px;
+//        width: 444px;
+//    }
