@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
-
 $break-small: 500px;
-$font-theme: "Permanent Marker", "Courier New", Courier;
+$font-theme: "Helvatica", "Courier New", Courier;
 $font-color: #181515;
+$bg-color: #ffffff;
+$color-theme-first:#4fd5ff;
+$color-theme-second:#8fe994;
+$color-theme-third:#005e71;
+
 
 * {
     margin: 0%;
@@ -14,7 +17,7 @@ html{
 }
 
 body {
-    background-color: #ffffff;
+    background-color:$bg-color;
 }
 
 .section {
@@ -24,7 +27,7 @@ body {
     align-items: center;
 }
 .about-me {
-    background-color: #6c757d;
+    background-color: $bg-color;
 }
 
 
@@ -34,23 +37,38 @@ body {
     font-weight: 700;
     font-size: 5vw;
     text-align: center;
-    color: #ffffff;
+    color:$font-color;
 }
 .desc {
-    color: #ffffff;
+    color: $font-color;
+}
+
+.top-header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(90deg, $color-theme-third 0%,$color-theme-first 46%, $color-theme-second 100%);
+    filter: blur(100px);
 }
 
 .profile-pic {
     display: block;
+    border-radius: 50%;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 200px;
     height: 30vh;
     margin: auto;
+    z-index: 2;
+}
+.contact-icons{
+    margin-top: -250px;
 }
 
 .section-footer{
-    position:relative;
+    position: absolute;;
     bottom:0;
 }
 .scroll-down-arrow {
@@ -62,7 +80,7 @@ body {
     stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: #ffffff;
+    stroke: $font-color;
     fill: none;
     height: 50px;
     width: 24px;
@@ -81,7 +99,7 @@ body {
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 
     75% {
@@ -93,13 +111,14 @@ body {
     }
 }
 
+//      PROJECTS SECTION
 .projects{
-    background-color: #343a40;
+    background-color: $color-theme-third;
 }
 
 .project-object{
     display: grid;
-    background-color: #dee2e6;
+    background-color: $color-theme-second;
     grid-template-columns: repeat(3,100px);
     grid-template-rows: auto;
     grid-template-areas: 
@@ -113,27 +132,10 @@ body {
 .project-title{
     grid-area: project-title;
     font-size: 30px;
-    background-color: #212529;
+    background-color: $color-theme-first;
     color: white;
 }
 .project-desc{
     grid-area: project-desc;
     font-size: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-//min width means that after
-//@media screen and (min-width: $break-small) {
-//    .profile-pic{
-//        height: 500px;
-//        width: 444px;
-//    }

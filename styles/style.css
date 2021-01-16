@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 * {
   margin: 0%;
   padding: 0%;
@@ -26,33 +25,51 @@ body {
 }
 
 .about-me {
-  background-color: #6c757d;
+  background-color: #ffffff;
 }
 
 .title {
   margin-top: 20px;
-  font-family: "Permanent Marker", "Courier New", Courier;
+  font-family: "Helvatica", "Courier New", Courier;
   font-weight: 700;
   font-size: 5vw;
   text-align: center;
-  color: #ffffff;
+  color: #181515;
 }
 
 .desc {
-  color: #ffffff;
+  color: #181515;
+}
+
+.top-header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 30vh;
+  background: -webkit-gradient(linear, left top, right top, from(#005e71), color-stop(46%, #4fd5ff), to(#8fe994));
+  background: linear-gradient(90deg, #005e71 0%, #4fd5ff 46%, #8fe994 100%);
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
 }
 
 .profile-pic {
   display: block;
+  border-radius: 50%;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 200px;
   height: 30vh;
   margin: auto;
+  z-index: 2;
+}
+
+.contact-icons {
+  margin-top: -250px;
 }
 
 .section-footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 
@@ -65,7 +82,7 @@ body {
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #ffffff;
+  stroke: #181515;
   fill: none;
   height: 50px;
   width: 24px;
@@ -87,8 +104,8 @@ body {
             transform: translateY(10px);
   }
   50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   75% {
     -webkit-transform: translateY(10px);
@@ -110,8 +127,8 @@ body {
             transform: translateY(10px);
   }
   50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   75% {
     -webkit-transform: translateY(10px);
@@ -124,13 +141,13 @@ body {
 }
 
 .projects {
-  background-color: #343a40;
+  background-color: #005e71;
 }
 
 .project-object {
   display: -ms-grid;
   display: grid;
-  background-color: #dee2e6;
+  background-color: #8fe994;
   -ms-grid-columns: (100px)[3];
       grid-template-columns: repeat(3, 100px);
   -ms-grid-rows: auto;
@@ -151,7 +168,7 @@ body {
   -ms-grid-column-span: 2;
   grid-area: project-title;
   font-size: 30px;
-  background-color: #212529;
+  background-color: #4fd5ff;
   color: white;
 }
 
