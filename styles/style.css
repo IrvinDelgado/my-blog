@@ -66,6 +66,18 @@ body {
 
 .contact-icons {
   margin-top: -250px;
+  white-space: nowrap;
+}
+
+.icon {
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .section-footer {
