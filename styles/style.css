@@ -11,6 +11,11 @@ body {
   background-color: #ffffff;
 }
 
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .section {
   height: 100vh;
   display: -webkit-box;
